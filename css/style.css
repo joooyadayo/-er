@@ -40,8 +40,8 @@ body::-webkit-scrollbar {
 .element_right {
   width: 600px;
   position: absolute;
-  top: 40%;
-  left: 60%;
+  top: 60%;
+  left: 50%;
 }
 
 @media screen and (max-width: 1024px) {
