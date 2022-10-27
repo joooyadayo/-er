@@ -79,7 +79,7 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 599px) {
   .element_left {
     width: 80vw;
-    top: -110%;
+    top: -130%;
     left: 0%;
   }
 }
