@@ -58,8 +58,8 @@ body{
 .element_right {
     width                       : 600px;
     position                    : absolute;
-    top                         : 40%;
-    left                        : 60%;
+    top                         : 60%;
+    left                        : 50%;
     @media screen and (max-width: $Tablet) {
         width                       : 80vw;
         top                         : 50%;
