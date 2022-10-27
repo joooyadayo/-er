@@ -59,7 +59,7 @@ body{
     width                       : 600px;
     position                    : absolute;
     top                         : 40%;
-    left                        : 40%;
+    left                        : 60%;
     @media screen and (max-width: $Tablet) {
         width                       : 80vw;
         top                         : 50%;
@@ -76,7 +76,7 @@ body{
     width                       : 50vw;
     position                    : absolute;
     top                         : -50%;
-    left                        : -90%;
+    left                        : -150%;
     @media screen and (max-width: $Tablet) {
         width                       : 80vw;
         top                         : -190%;
@@ -84,7 +84,7 @@ body{
     }
     @media screen and (max-width: $Smartphone) {
         width                       : 80vw;
-        top                         : -170%;
+        top                         : -110%;
         left                        : 0%;
     }
 }
