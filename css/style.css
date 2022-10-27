@@ -41,7 +41,7 @@ body::-webkit-scrollbar {
   width: 600px;
   position: absolute;
   top: 40%;
-  left: 40%;
+  left: 60%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -65,7 +65,7 @@ body::-webkit-scrollbar {
   width: 50vw;
   position: absolute;
   top: -50%;
-  left: -90%;
+  left: -150%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -79,7 +79,7 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 599px) {
   .element_left {
     width: 80vw;
-    top: -170%;
+    top: -110%;
     left: 0%;
   }
 }
