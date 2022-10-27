@@ -9,14 +9,24 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   font-weight: 600;
-  color: rgb(255, 255, 255);
-  background-color: rgb(53, 53, 53);
-  scrollbar-width: none; /*Firefox対応のスクロールバー非表示コード*/
-  -ms-overflow-style: none; /*Internet Explore対応のスクロールバー非表示コード*/
+  color: white;
+  background-color: #353535;
+  scrollbar-width: none;
+  /*Firefox対応のスクロールバー非表示コード*/
+  -ms-overflow-style: none;
+  /*Internet Explore対応のスクロールバー非表示コード*/
   overflow-x: hidden;
 }
+
 body::-webkit-scrollbar {
-  display: none; /*Google Chrome、Safari、Microsoft Edge対応のスクロールバー非表示コード*/
+  display: none;
+  /*Google Chrome、Safari、Microsoft Edge対応のスクロールバー非表示コード*/
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 1.2rem;
+  }
 }
 
 /*Object------------------------------------------------------------------------*/
@@ -34,12 +44,44 @@ body::-webkit-scrollbar {
   left: 40%;
 }
 
+@media screen and (max-width: 1024px) {
+  .element_right {
+    width: 80vw;
+    top: 50%;
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .element_right {
+    width: 80vw;
+    top: 50%;
+    left: 10%;
+  }
+}
+
 /*クリックで表示する左側要素*/
 .element_left {
   width: 50vw;
   position: absolute;
   top: -50%;
   left: -90%;
+}
+
+@media screen and (max-width: 1024px) {
+  .element_left {
+    width: 80vw;
+    top: -115%;
+    left: 0%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .element_left {
+    width: 80vw;
+    top: -170%;
+    left: 0%;
+  }
 }
 
 /*タイトル用 左上からずらして配置*/
@@ -50,25 +92,41 @@ body::-webkit-scrollbar {
   font-size: 6rem;
 }
 
+@media screen and (max-width: 1024px) {
+  .title_box {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .title_box {
+    font-size: 2rem;
+  }
+}
+
 /*「-er」タイトル用*/
 .title {
-  color: rgb(226, 114, 62);
+  color: #e2723e;
 }
 
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 /*aタグ　装飾*/
 .link_text {
   text-decoration: none;
-  color: rgb(69, 69, 160);
-  transition: all 0.3s ease 0s;
+  color: #4545a0;
+  -webkit-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
   text-decoration: none;
 }
+
 .link_text:hover {
   cursor: pointer;
-  color: rgb(226, 114, 62);
+  color: #e2723e;
 }
 
 /*JS連動　タイピングアニメーション前*/
@@ -91,11 +149,17 @@ body::-webkit-scrollbar {
   margin: auto;
   width: 0;
   height: 5px;
-  background: rgb(226, 114, 62);
+  background: #e2723e;
 }
 
 .devide_text {
   font-size: 6rem;
+}
+
+@media screen and (max-width: 599px) {
+  .devide_text {
+    font-size: 2.5rem;
+  }
 }
 
 .js-scrollLineSub {
@@ -106,7 +170,7 @@ body::-webkit-scrollbar {
   margin: auto;
   width: 0;
   height: 5px;
-  background: rgb(255, 255, 255);
+  background: white;
 }
 
 /*WORKS サムネ*/
@@ -122,384 +186,80 @@ body::-webkit-scrollbar {
   z-index: 2;
   padding: 10px 10px 110px;
   overflow: hidden;
-  color: rgb(226, 114, 62);
+  color: #e2723e;
   font-size: 14px;
   line-height: 1;
-  letter-spacing: 0.2em;
+  letter-spacing: .2em;
   text-transform: uppercase;
   text-decoration: none;
-  -ms-writing-mode: tb-lr;
-      writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
 }
+
 .forceScroll::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
   width: 1px;
   height: 100px;
-  background: rgb(226, 114, 62);
+  background: #e2723e;
   -webkit-animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
           animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
 }
+
 @-webkit-keyframes sdl {
   0% {
-    transform: scale(1, 0);
-    transform-origin: 0 0;
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
   }
   50% {
-    transform: scale(1, 1);
-    transform-origin: 0 0;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
   }
   50.1% {
-    transform: scale(1, 1);
-    transform-origin: 0 100%;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
   }
   100% {
-    transform: scale(1, 0);
-    transform-origin: 0 100%;
-  }
-}
-@keyframes sdl {
-  0% {
-    transform: scale(1, 0);
-    transform-origin: 0 0;
-  }
-  50% {
-    transform: scale(1, 1);
-    transform-origin: 0 0;
-  }
-  50.1% {
-    transform: scale(1, 1);
-    transform-origin: 0 100%;
-  }
-  100% {
-    transform: scale(1, 0);
-    transform-origin: 0 100%;
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
   }
 }
 
-@media screen and (max-width: 959px) {
-  /* 959px以下に適用されるCSS（タブレット用） */
-  /*Foundation--------------------------------------------------------------------*/
-  body {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
-    background-color: rgb(53, 53, 53);
-    scrollbar-width: none; /*Firefox対応のスクロールバー非表示コード*/
-    -ms-overflow-style: none; /*Internet Explore対応のスクロールバー非表示コード*/
+@keyframes sdl {
+  0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
   }
-  body::-webkit-scrollbar {
-    display: none; /*Google Chrome、Safari、Microsoft Edge対応のスクロールバー非表示コード*/
+  50% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
   }
-  /*Object------------------------------------------------------------------------*/
-  /*基本親要素*/
-  .box {
-    height: 100vh;
-    position: relative;
+  50.1% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
   }
-  /*要素を右側に配置*/
-  .element_right {
-    width: 80vw;
-    position: absolute;
-    top: 50%;
-    left: 10%;
-  }
-  /*クリックで表示する左側要素*/
-  .element_left {
-    width: 80vw;
-    position: absolute;
-    top: -115%;
-    left: 0%;
-  }
-  /*タイトル用 左上からずらして配置*/
-  .title_box {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    font-size: 5rem;
-  }
-  /*「-er」タイトル用*/
-  .title {
-    color: rgb(226, 114, 62);
-  }
-  .flex {
-    display: flex;
-  }
-  /*aタグ　装飾*/
-  .link_text {
-    text-decoration: none;
-    color: rgb(69, 69, 160);
-    transition: all 0.3s ease 0s;
-    text-decoration: none;
-  }
-  .link_text:hover {
-    cursor: pointer;
-    color: rgb(226, 114, 62);
-  }
-  /*JS連動　タイピングアニメーション前*/
-  .js-beforeTyping {
-    display: none;
-  }
-  /*JS連動 scrollLIne*/
-  .scrollLineBox {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-  }
-  .js-scrollLine {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    margin: auto;
-    width: 0;
-    height: 5px;
-    background: rgb(226, 114, 62);
-  }
-  .devide_text {
-    font-size: 6rem;
-  }
-  .js-scrollLineSub {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    margin: auto;
-    width: 0;
-    height: 5px;
-    background: rgb(255, 255, 255);
-  }
-  /*WORKS サムネ*/
-  .thumbnail {
-    width: 30vw;
-  }
-  .forceScroll {
-    display: inline-block;
-    position: absolute;
-    right: 40px;
-    bottom: 0;
-    z-index: 2;
-    padding: 10px 10px 110px;
-    overflow: hidden;
-    color: rgb(226, 114, 62);
-    font-size: 14px;
-    line-height: 1;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    text-decoration: none;
-    -ms-writing-mode: tb-lr;
-        writing-mode: vertical-lr;
-  }
-  .forceScroll::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 1px;
-    height: 100px;
-    background: rgb(226, 114, 62);
-    -webkit-animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
-            animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
-  }
-  @-webkit-keyframes sdl {
-    0% {
-      transform: scale(1, 0);
-      transform-origin: 0 0;
-    }
-    50% {
-      transform: scale(1, 1);
-      transform-origin: 0 0;
-    }
-    50.1% {
-      transform: scale(1, 1);
-      transform-origin: 0 100%;
-    }
-    100% {
-      transform: scale(1, 0);
-      transform-origin: 0 100%;
-    }
-  }
-  @keyframes sdl {
-    0% {
-      transform: scale(1, 0);
-      transform-origin: 0 0;
-    }
-    50% {
-      transform: scale(1, 1);
-      transform-origin: 0 0;
-    }
-    50.1% {
-      transform: scale(1, 1);
-      transform-origin: 0 100%;
-    }
-    100% {
-      transform: scale(1, 0);
-      transform-origin: 0 100%;
-    }
+  100% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
   }
 }
-@media screen and (max-width: 800px) {
-  /* 480px以下に適用されるCSS（スマホ用） */
-  /*Foundation--------------------------------------------------------------------*/
-  body {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
-    background-color: rgb(53, 53, 53);
-    scrollbar-width: none; /*Firefox対応のスクロールバー非表示コード*/
-    -ms-overflow-style: none; /*Internet Explore対応のスクロールバー非表示コード*/
-  }
-  body::-webkit-scrollbar {
-    display: none; /*Google Chrome、Safari、Microsoft Edge対応のスクロールバー非表示コード*/
-  }
-  /*Object------------------------------------------------------------------------*/
-  /*基本親要素*/
-  .box {
-    height: 100vh;
-    position: relative;
-  }
-  /*要素を右側に配置*/
-  .element_right {
-    width: 80vw;
-    position: absolute;
-    top: 50%;
-    left: 10%;
-  }
-  /*クリックで表示する左側要素*/
-  .element_left {
-    width: 80vw;
-    position: absolute;
-    top: -170%;
-    left: 0%;
-  }
-  /*タイトル用 左上からずらして配置*/
-  .title_box {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    font-size: 2rem;
-  }
-  /*「-er」タイトル用*/
-  .title {
-    color: rgb(226, 114, 62);
-  }
-  .flex {
-    display: flex;
-  }
-  /*aタグ　装飾*/
-  .link_text {
-    text-decoration: none;
-    color: rgb(69, 69, 160);
-    transition: all 0.3s ease 0s;
-    text-decoration: none;
-  }
-  .link_text:hover {
-    cursor: pointer;
-    color: rgb(226, 114, 62);
-  }
-  /*JS連動　タイピングアニメーション前*/
-  .js-beforeTyping {
-    display: none;
-  }
-  /*JS連動 scrollLIne*/
-  .scrollLineBox {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-  }
-  .js-scrollLine {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    margin: auto;
-    width: 0;
-    height: 5px;
-    background: rgb(226, 114, 62);
-  }
-  .devide_text {
-    font-size: 2.5rem;
-  }
-  .js-scrollLineSub {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    margin: auto;
-    width: 0;
-    height: 5px;
-    background: rgb(255, 255, 255);
-  }
-  /*WORKS サムネ*/
-  .thumbnail {
-    width: 30vw;
-  }
-  .forceScroll {
-    display: inline-block;
-    position: absolute;
-    right: 40px;
-    bottom: 0;
-    z-index: 2;
-    padding: 10px 10px 110px;
-    overflow: hidden;
-    color: rgb(226, 114, 62);
-    font-size: 14px;
-    line-height: 1;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    text-decoration: none;
-    -ms-writing-mode: tb-lr;
-        writing-mode: vertical-lr;
-  }
-  .forceScroll::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 1px;
-    height: 100px;
-    background: rgb(226, 114, 62);
-    -webkit-animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
-            animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
-  }
-  @-webkit-keyframes sdl {
-    0% {
-      transform: scale(1, 0);
-      transform-origin: 0 0;
-    }
-    50% {
-      transform: scale(1, 1);
-      transform-origin: 0 0;
-    }
-    50.1% {
-      transform: scale(1, 1);
-      transform-origin: 0 100%;
-    }
-    100% {
-      transform: scale(1, 0);
-      transform-origin: 0 100%;
-    }
-  }
-  @keyframes sdl {
-    0% {
-      transform: scale(1, 0);
-      transform-origin: 0 0;
-    }
-    50% {
-      transform: scale(1, 1);
-      transform-origin: 0 0;
-    }
-    50.1% {
-      transform: scale(1, 1);
-      transform-origin: 0 100%;
-    }
-    100% {
-      transform: scale(1, 0);
-      transform-origin: 0 100%;
-    }
-  }
-}/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
