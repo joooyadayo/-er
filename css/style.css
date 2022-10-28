@@ -54,15 +54,15 @@ body::-webkit-scrollbar {
 
 /*クリックで表示する左側要素*/
 .element_left {
-  width: 50vw;
+  width: 40vw;
   position: absolute;
-  top: -60%;
-  left: -150%;
+  top: -100%;
+  left: -100%;
 }
 @media screen and (max-width: 1024px) {
   .element_left {
     width: 80vw;
-    top: -200%;
+    top: -220%;
     left: 0%;
   }
 }
@@ -104,7 +104,7 @@ body::-webkit-scrollbar {
 /*aタグ　装飾*/
 .link_text {
   text-decoration: none;
-  color: rgb(69, 69, 160);
+  color: rgb(93, 93, 212);
   transition: all 0.3s ease 0s;
   text-decoration: none;
 }
@@ -125,6 +125,7 @@ body::-webkit-scrollbar {
   height: 100vh;
 }
 
+/*大カテゴリー スクロール連動区切り線*/
 .js-scrollLine {
   position: absolute;
   top: 0;
@@ -136,6 +137,7 @@ body::-webkit-scrollbar {
   background: rgb(226, 114, 62);
 }
 
+/*大カテゴリー js-scrollLine 直下に表示するテキスト*/
 .devide_text {
   font-size: 6rem;
 }
@@ -145,6 +147,7 @@ body::-webkit-scrollbar {
   }
 }
 
+/*小カテゴリー スクロール連動区切り線*/
 .js-scrollLineSub {
   position: absolute;
   top: 0;
@@ -156,11 +159,12 @@ body::-webkit-scrollbar {
   background: rgb(255, 255, 255);
 }
 
-/*WORKS サムネ*/
+/*WORKS サムネイル用*/
 .thumbnail {
   width: 30vw;
 }
 
+/*スクロールを促すオブジェクト*/
 .forceScroll {
   display: inline-block;
   position: absolute;
