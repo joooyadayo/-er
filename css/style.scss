@@ -18,7 +18,7 @@ $Smallest                       : 1.2rem;
 $White                          : rgb(255, 255, 255);
 $Black                          : rgb(53, 53, 53);
 $Orange                         : rgb(226, 114, 62);
-$Blue                           : rgb(69, 69, 160);
+$Blue                           : rgb(93, 93, 212);
 $Green                          : rgb(35, 124, 35);
 $Red                            : rgb(148, 15, 15);
 
@@ -73,13 +73,13 @@ body{
 }
 /*クリックで表示する左側要素*/
 .element_left {
-    width                       : 50vw;
+    width                       : 40vw;
     position                    : absolute;
-    top                         : -60%;
-    left                        : -150%;
+    top                         : -100%;
+    left                        : -100%;
     @media screen and (max-width: $Tablet) {
         width                       : 80vw;
-        top                         : -200%;
+        top                         : -220%;
         left                        : 0%;
     }
     @media screen and (max-width: $Smartphone) {
@@ -132,6 +132,7 @@ body{
     width                       : 100%;
     height                      : 100vh;
 }
+/*大カテゴリー スクロール連動区切り線*/
 .js-scrollLine {
     position                    : absolute;
     top                         : 0;
@@ -142,6 +143,7 @@ body{
     height                      : 5px;
     background                  : $Orange;
 }
+/*大カテゴリー js-scrollLine 直下に表示するテキスト*/
 .devide_text {
     font-size                   : $Large;
     @media screen and (max-width: $Tablet) {
@@ -151,6 +153,7 @@ body{
         font-size                   : $Small;
     }
 }
+/*小カテゴリー スクロール連動区切り線*/
 .js-scrollLineSub {
     position                    : absolute;
     top                         : 0;
@@ -161,12 +164,12 @@ body{
     height                      : 1px;
     background                  : $White;
 }
-/*WORKS サムネ*/
+/*WORKS サムネイル用*/
 .thumbnail {
     width                       : 30vw;
 }
 
-
+/*スクロールを促すオブジェクト*/
 .forceScroll{
     display                     : inline-block;
     position                    : absolute;
